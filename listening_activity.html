@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Activity</title>
+    <link rel="stylesheet" href="/css/listening_activity.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Listening Activity</h1>
+            <p>Explore my personalized analytics to gain insights into your music preferences.</p>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <div class="bar-chart">
+                    <h2>Listening Activity</h2>
+                    <span>In 2023</span>
+                    <canvas id="activityChart"></canvas>
+                </div>
+            </section>
+            <section>
+                <div class="pie-chart">
+                    <h2>My Top geners</h2>
+                    <canvas id="genreChart"></canvas>
+                </div>
+            </section>
+        </article>
+        <article class="activity">
+            <section>
+                <div class="most-played-artists">
+                    <h2>Most Played Artists All Time</h2>
+                    <ol>
+                        <li>Billie Eilish</li>
+                        <li>Sia</li>
+                        <li>H.E.R</li>
+                        <li>SZA</li>
+                        <li>Kanye West</li>
+                        <li>Burna Boy</li>
+                        <li>Doja Cat</li>
+                        <li>Playboy Carti</li>
+                        <li>The weekend</li>
+                        <li>Adele</li>
+                    </ol>
+                </div>
+            </section>
+            <section>
+                <div class="top-albums">
+                    <h2>My Top Albums</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Album</th>
+                                <th>Artist</th>
+                                <th>Genre</th>
+                                <th>Plays</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Graduation</td>
+                                <td>Kanye west</td>
+                                <td>Pop</td>
+                                <td>250</td>
+                            </tr>
+                            <tr>
+                                <td>After Hours</td>
+                                <td>The Weeknd</td>
+                                <td>R&B</td>
+                                <td>180</td>
+                            </tr>
+                            <tr>
+                                <td>Whole lotta red</td>
+                                <td>Playboy Carti</td>
+                                <td>Electronic Rap</td>
+                                <td>120</td>
+                            </tr>
+                            <tr>
+                                <td>Planet Her</td>
+                                <td>Doja Cat</td>
+                                <td>Pop</td>
+                                <td>240</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </article>
+        <hr>
+
+        <aside>
+            <div class="recommended-playlists-links">
+                <h3>Recommended Playlists</h3>
+                <p><b>Have you listened to my playlists?? </b><em><strong>:D Check this out!</strong></em></p>
+                <ul>
+                    <li><a href="/my_playlists.html#afrobeats">AfroBeats</a></li>
+                    <li><a href="/my_playlists.html#workout">Workout Beats</a></li>
+                    <li><a href="/my_playlists.html#pop">Pop Hits</a></li>
+                    <li><a href="/my_playlists.html#rap">Rap</a></li>
+                    <li><a href="/my_playlists.html#gospel">Gospel</a></li>
+                    <li><a href="/my_playlists.html#chill">Chill Vibes</a></li>
+                </ul>
+            </div>
+            <div>
+                <label for="genre-select">select the genre you like</label>
+                <select id="genre-select">
+                    <option value="" disabled>__genre__</option>
+                    <option value="pop">Pop</option>
+                    <option value="gospel">Gospel</option>
+                    <option value="r&b">R&B</option>
+                    <option value="rap">Rap</option>
+                    <option value="afrobeat">AfroBeats</option>
+                </select>
+            </div>
+        </aside>
+        <audio controls autoplay muted>
+            <source src="/audio/A1TH x QUADECA - CLASS IN SESSION.m4a">
+        </audio>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <br>
+            <a href="/welcome.html">HOME</a>
+            <a href="/playlists.html">Playlists</a>
+            <a href="/podcasts.html">Listening Activity</a>
+            <a href="#top">back to top</a>
+            <pre>&copy; 2023 Soundscape.  All rights reserved.</pre>
+        </div>
+    </footer>
+
+    <script>
+        const activityData = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December'],
+            datasets: [{
+                label: 'Hours Listened weighted',
+                data: [2, 3, 4, 2, 5, 6, 3, 2, 8, 6, 7],
+                backgroundColor: '#510051'
+            }]
+            
+        };
+
+        const activityConfig = {
+            type: 'bar',
+            data: activityData
+        };
+
+        const activityChart = new Chart(
+            document.getElementById('activityChart'),
+            activityConfig
+        );
+    </script>
+    <script>
+        const genreData = {
+            labels: ['Rap', 'Pop', 'AfroBeats', 'r&b', 'Hip-Hop', 'Urban contemporary'],
+            datasets: [{
+                label: 'Hours Listened',
+                data: [15, 20, 25, 8, 10, 4],
+                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#8A2BE2', '#00FF7F', '#fcfcfc']
+            }]
+        };
+
+        const genreConfig = {
+            type: 'pie',
+            data: genreData
+        };
+
+        const genreChart = new Chart(
+            document.getElementById('genreChart'),
+            genreConfig
+        );
+    </script>
+</body>
+</html>

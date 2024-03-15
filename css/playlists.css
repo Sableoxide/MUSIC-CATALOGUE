@@ -1,0 +1,59 @@
+body {
+    margin: 0px;
+    overflow-x: hidden;
+    background-color: #ffecff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header-container {
+    height: 4rem;
+    width: 100%;
+    background-color: #ffecff;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 #00000033;
+    border: solid #51005136 1px;
+    }.header-container h1 {
+        margin: 0px;
+        color: #510051;
+    }.header-container p {
+        margin: 0px;
+}
+
+.playlists {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }.playlist-card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        background-color: #ffecff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 #00000080;
+        border: solid #51005136 1px;
+        width: 30%;
+    }.playlist-card iframe {
+        height: 50rem;
+        width: 100%;
+    }.playlist-card h3 {
+        margin: 0px;
+        color: #510051;
+
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fcfcfc;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}.footer-container a {
+    color: #510051;
+    text-decoration: none;
+}.footer-container a:hover {
+    text-decoration: underline;
+}

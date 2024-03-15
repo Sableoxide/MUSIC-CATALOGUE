@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/login.js"></script>
+    <title>Soundscape Showcase</title>
+</head>
+<body>
+    <main>
+        <div class="login-container">
+            <h1 style="color: #510051;">Sounscape Showcase</h1>
+            
+            <form id="login-form" action="">
+                <fieldset>
+                    <legend>LOG IN</legend>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="e.g Daniel" required>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="enter your password" required>
+                    <div class="show-password">
+                        <label for="show-password">Show Password</label>
+                        <input type="checkbox" name="showpassword" id="show-password">
+                    </div>
+                    <button type="submit" class="button" onclick="verifyCredentials()">LOG IN</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
